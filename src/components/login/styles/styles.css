@@ -1,0 +1,73 @@
+:root {
+--pais1:#9bfcc7;
+--pais2:#b69cfc;
+--pais3:#ffbec1;
+--dark: #282c34;
+--default:#fafafa;
+--button:#028bbd;
+}
+
+
+
+.form-section {
+  background-color: var(--dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+input, 
+select{
+  border: 1px solid var(--dark);
+  border-radius: 0.25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  padding: 10px 20px;
+  margin: 10px 0px;
+}
+
+input:focus,
+select:focus{
+border-color: var(--default);
+outline: 0;
+box-shadow: 0 0 0 0.2rem #007bff40;
+}
+
+button{
+  padding: 10px 20px;
+  margin: 10px 0px;
+  background-color: var(--button); 
+  border-radius: 10px;
+  border: var(--button) 1px solid;
+  color: var(--default);
+}
+button:hover{
+  color: var(--button);
+  background-color: var(--default); 
+  border: var(--button) 1px solid;
+}
+
+input[name="email"].default, 
+input[name="password"].default {
+  background-color: var(--default);
+}
+
+input[name="email"].ven, 
+input[name="password"].ven {
+  background-color: var(--pais1);
+}
+input[name="email"].arg, 
+input[name="password"].arg {
+  background-color: var(--pais2);
+}
+input[name="email"].chl, 
+input[name="password"].chl {
+  background-color: var(--pais3);
+}
+
+::placeholder{
+  color: #282c34;
+}
+
